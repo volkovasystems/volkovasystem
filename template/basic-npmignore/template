@@ -1,0 +1,12 @@
+.babelrc
+gulpfile.js
+*.cmd
+*.sh
+*.html
+test.*
+wdio.*
+webpack.*
+*.module.*
+build.json
+install.json
+minify.json

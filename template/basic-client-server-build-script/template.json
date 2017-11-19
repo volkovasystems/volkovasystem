@@ -1,0 +1,12 @@
+{
+	"scripts": {
+		"load": "flxc execute ./install.json",
+		"pristine": "npm run reset && npm run load",
+		"build:support": "gulp --module @module --all",
+		"build:deploy": "webpack --config webpack.compact.js --progress --display-modules",
+		"compress:node": "uglifyjs --config-file ./minify.json --output @module.pack.js -- @module.pack.js",
+		"build:node": "webpack --config webpack.node.js --progress --display-modules && npm run compress:node",
+		"rebuild": "npm run build:support && npm run build:deploy && npm run build:node",
+		"build": "npm run pristine && npm run rebuild"
+	}
+}

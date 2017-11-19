@@ -1,0 +1,9 @@
+{
+	"scripts": {
+		"reset": "rsetmod clean",
+		"clear": "rsetmod clean --clear",
+		"minimize": "rsetmod clean --minimize --module @module",
+		"clean": "rsetmod clean --polish",
+		"formal": "jesy apply '*.json'"
+	}
+}
